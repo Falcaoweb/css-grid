@@ -1,0 +1,41 @@
+@import "../base.css";
+
+.content {
+  padding: 1rem;
+}
+
+.content > .item {
+  background: royalblue;
+  border: 0.25rem dashed crimson;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font: bold 2rem helvetica;
+}
+
+.duas-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tres-colunas-diferentes {
+  display: grid;
+  grid-template-columns: 3fr 5fr 8fr;
+}
+.quatro-colunas {
+  display: grid;
+  grid-template-columns: 10rem 4fr 6fr 10rem;
+}
+.colunas-linhas {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  grid-template-rows: 5rem 8rem;
+}
+
+.colunas-espaco{
+    display: grid;
+    grid-template-columns:4rem 1fr 1fr;
+    grid-template-rows:5rem 5rem;
+}

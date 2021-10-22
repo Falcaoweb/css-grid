@@ -1,0 +1,132 @@
+@import "./base.css";
+
+.content {
+  padding: 1rem;
+}
+
+.content > .item {
+  background: royalblue;
+  border: 0.25rem dashed crimson;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font: bold 2rem helvetica;
+}
+
+/* #region grid-colunas-tamanhos-iguais*/
+.grid-colunas-tamanhos-iguais {
+  display: grid;
+  /** grid-template-columns: 1fr 1fr 1fr;
+    faz com que tenha 3 colunas com tamanhos iguais.
+    a quantidade de valores passados é a quantidade de colunas que teremos
+    */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+/* #endregion */
+
+/* #region grid com colunas de tamanhos diferentes */
+/** grid-template-columns:1fr 1fr 1fr 2fr;
+estamos colocando 4 colunas.
+neste caso somamos os valores(1fr + 21fr + 1fr +2 fr = 6fr,
+divuididos a largura em 6(6fr) partes de tamanhos iguais e distribuidos entre 4 items da couna.
+
+*/
+.grid-colunas-tamanhos-diferentes {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr;
+}
+/* #endregion */
+
+/* #region grid-colunas-tamanhos-fixos */
+/*grid-template-columns: 5rem 64px ;
+utilizamos duas colunas .
+A primeira com tamanho fixo de 5 rem e a segunda com tamanho de 64px
+*/
+.grid-colunas-tamanhos-fixos {
+  display: grid;
+  grid-template-columns: 5rem 64px;
+}
+/* #endregion */
+
+/* #region grid-linhas-tamanhos-iguais */
+
+.grid-linhas-tamanhos-iguais {
+  display: grid;
+  /** grid-tempplate-rows: repeat (5, 1fr;
+    repeat(5, 1fr) = 1fr 1fr 1fr 1fr 1fr;
+    Todos os 5 primeiros ietms vão ter omsemo tamanho.
+    */
+  grid-template-rows: repeat(5, 1fr);
+}
+/* #endregion grid-linhas-tamanhos-diferentes*/
+
+/* #region */
+.grid-linhas-tamanhos-diferentes {
+  display: grid;
+  /**
+    grid-tamplate-rows:2fr 1.5fr repeat(3, 1fr)
+    2fr 1.5fr repeat(3, 1fr ) = 2fr 1.5 fr 1fr 1fr 1fr;
+    estamos utilizando 5 colunas com tamanhos diferentes 
+    a primeira coluna 2fr
+    a segunda coluna 1.5fr.
+    a treceira. quarta e quinta coluna com o mesmo tamanho que sobrou do espaço
+
+    */
+  grid-template-rows: 2fr 1.5fr repeat(3, 1fr);
+}
+
+/* #endregion */
+
+/* #region  grid-linhas-tamanhos-fixos*/
+.grid-linhas-tamanhos-fixos {
+  display: grid;
+  /** gird-template-rows:2rem 64px 48 px 3rem 4rem;
+Primeira linha com 2rem.
+segunda linha com 64px.
+terceira linha com 48px.
+quarta linha com 3rem.
+quinta linha com4rem.
+*/
+  grid-template-rows: 2rem 64px 48px 3rem 4rem;
+}
+/* #enderegion */
+/* #region espacamento-entre-colunas */
+.espacamento-entre-colunas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /** column-gap:1rem;
+  espaçamento entre todas as colunas de 1rem
+  */
+  column-gap: 1rem;
+}
+
+/* #endregion */
+
+/* #region espacamento-entre-linhas */
+.espacamento-entre-linhas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 1rem;
+  /** row-gap:1rem;
+  espaçamento entre todas as linhas de 1rem
+  */
+}
+
+/* #endregion */
+/* #region  espacamento-entre-clunas-linhas*/
+.espacamento-entre-clunas-linhas {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  /** gap: 1rem 2rem;
+  espaçamento entre todas as linhas de 1rem.
+  espaçamento entre todas as colunas de 2rem
+  */
+  gap: 1rem 3rem;
+}
+
+/* @endregion */
